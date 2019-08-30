@@ -13,6 +13,11 @@
     transition: background-color 500ms;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   html, body, #app {
     width: 100%;
     height: 100%;

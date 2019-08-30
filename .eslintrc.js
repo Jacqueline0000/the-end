@@ -16,6 +16,7 @@ module.exports = {
       ignores: [],
     }],
     'no-param-reassign': 'off', // 禁止对函数的参数重新赋值
+    'no-nested-ternary': 'off', // 禁止使用嵌套的三元表达式
     'no-plusplus': 'off', // 禁止使用 ++ 或 --
     'no-underscore-dangle': 'off', // @off 下划线在变量名中很常用
     'no-undef': 'off', // 禁止使用未定义的变量

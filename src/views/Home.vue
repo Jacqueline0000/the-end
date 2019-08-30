@@ -1,14 +1,20 @@
 <template>
   <div class="main">
-    <div
+    <router-link
       class="month-box"
       :class="{ active: item.isActive }"
       v-for="(item, index) in months"
       :key="index"
+      :to="{
+                name:'month',
+                params:{
+                year: item.year,
+                month: item.month,
+                }}"
     >
       <span class="hover-month">{{item.year}}</span>
       {{item.month}}
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -58,7 +64,7 @@
 
   .month-box {
     width: 8.333%;
-    height: 5%;
+    height: .15rem;
     line-height: .15rem;
     background-color: #e3e6eb;
     opacity: .6;
@@ -71,13 +77,16 @@
     background-color: #37cb8b;
     opacity: .8;
   }
+
   .month-box:hover {
     opacity: 1;
   }
-  .hover-month{
+
+  .hover-month {
     display: none;
   }
-  .month-box:hover>.hover-month{
+
+  .month-box:hover > .hover-month {
     display: inline-block;
   }
 </style>
